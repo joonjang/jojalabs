@@ -90,7 +90,7 @@ body {
 
 .section-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   gap: 0.8rem 1.2rem;
   margin-bottom: 1rem;
@@ -308,37 +308,86 @@ body {
 .capability-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.78rem;
+  gap: 0.96rem;
+  align-items: stretch;
 }
 
 .capability-card {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  gap: 0.62rem;
-  border: 1px solid var(--border);
-  border-radius: 0.92rem;
-  background: rgba(255, 255, 255, 0.64);
-  padding: 0.96rem;
-  color: #4e4d49;
-  font-size: 0.95rem;
-  line-height: 1.55;
+  flex-direction: column;
+  gap: 0.72rem;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 1.12rem;
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.88) 0%, rgba(245, 242, 236, 0.95) 100%);
+  padding: 1rem 1.02rem 1.06rem;
+  min-height: 9.4rem;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.92) inset,
+    0 12px 24px rgba(17, 17, 17, 0.06);
+  overflow: hidden;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.capability-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255, 74, 61, 0.72), rgba(255, 74, 61, 0));
+}
+
+.capability-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 74, 61, 0.28);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 16px 28px rgba(17, 17, 17, 0.08);
+}
+
+.capability-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.78rem;
+}
+
+.capability-title {
+  margin: 0;
+  font-family: "Space Grotesk", "Avenir Next", sans-serif;
+  color: #22211f;
+  font-size: 1.04rem;
+  font-weight: 650;
+  letter-spacing: -0.018em;
+  line-height: 1.22;
+}
+
+.capability-description {
+  margin: 0;
+  color: #54524c;
+  font-size: 0.91rem;
+  line-height: 1.56;
+  max-width: 100%;
+  padding-right: 0;
+  text-wrap: pretty;
 }
 
 .capability-icon {
-  width: 1.46rem;
-  height: 1.46rem;
+  width: 2.08rem;
+  height: 2.08rem;
   flex: 0 0 auto;
-  color: #4b4a45;
-  margin-top: 0.16rem;
+  border-radius: 0.68rem;
+  border: 1px solid rgba(255, 74, 61, 0.3);
+  background: rgba(255, 74, 61, 0.13);
+  color: #b9382c;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .capability-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.capability-text {
-  color: #565551;
+  width: 1.06rem;
+  height: 1.06rem;
 }
 
 .contact-list {
@@ -451,6 +500,16 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .capability-card {
+    min-height: 8.8rem;
+    padding: 0.86rem 0.86rem 0.92rem;
+  }
+
+  .capability-icon {
+    width: 1.86rem;
+    height: 1.86rem;
+  }
+
   .product-links {
     flex-direction: column;
     align-items: center;
@@ -463,11 +522,11 @@ body {
     width: 100%;
     justify-content: center;
     gap: 0.36rem;
-    order: 0;
+    order: 1;
   }
 
   .product-link {
-    order: 1;
+    order: 0;
     width: auto;
     padding: 0.9rem 1.2rem;
     font-size: 0.98rem;

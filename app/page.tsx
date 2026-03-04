@@ -17,19 +17,27 @@ const productProof = [
 const capabilities = [
   {
     icon: "product",
-    text: "User-facing product experiences (mobile + web)",
+    title: "Product Design & Delivery",
+    description:
+      "Turning product ideas into intuitive web and mobile experiences from concept to launch.",
   },
   {
     icon: "backend",
-    text: "Backend architecture, APIs, and integrations",
+    title: "Backend & AI Architecture",
+    description:
+      "Building scalable data and backend systems that support evolving logic and intelligent features.",
   },
   {
     icon: "reliability",
-    text: "System reliability with queues, retries, and monitoring",
+    title: "Resilient Systems Engineering",
+    description:
+      "Designing fault-tolerant systems with observability and recovery built into daily operations.",
   },
   {
     icon: "cloud",
-    text: "Cloud infrastructure and CI/CD release workflows",
+    title: "Cloud & Release Operations",
+    description:
+      "Streamlining release workflows to ship safely, continuously, and without operational drag.",
   },
 ] as const;
 
@@ -177,21 +185,25 @@ export default function Home() {
           <h2 id="what-i-build-title" className="section-title">
             <span className="title-icon" aria-hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M12 20h9" />
-                <path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                <path d="m8 8-4 4 4 4" />
+                <path d="m16 8 4 4-4 4" />
+                <path d="m13 6-2 12" />
               </svg>
             </span>
-            What I build
+            Engineering Focus
           </h2>
         </div>
 
         <div className="capability-grid">
           {capabilities.map((item) => (
-            <article key={item.text} className="capability-card">
-              <span className="capability-icon" aria-hidden>
-                <CapabilityGlyph kind={item.icon} />
-              </span>
-              <span className="capability-text">{item.text}</span>
+            <article key={item.title} className="capability-card">
+              <div className="capability-head">
+                <h3 className="capability-title">{item.title}</h3>
+                <span className="capability-icon" aria-hidden>
+                  <CapabilityGlyph kind={item.icon} />
+                </span>
+              </div>
+              <p className="capability-description">{item.description}</p>
             </article>
           ))}
         </div>
