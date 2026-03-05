@@ -185,12 +185,12 @@ export default function Home() {
           <h2 id="what-i-build-title" className="section-title">
             <span className="title-icon" aria-hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="m8 8-4 4 4 4" />
-                <path d="m16 8 4 4-4 4" />
-                <path d="m13 6-2 12" />
+                <path d="M10 5H8a3 3 0 0 0-3 3v2a2 2 0 0 1-2 2 2 2 0 0 1 2 2v2a3 3 0 0 0 3 3h2" />
+                <path d="M14 5h2a3 3 0 0 1 3 3v2a2 2 0 0 0 2 2 2 2 0 0 0-2 2v2a3 3 0 0 1-3 3h-2" />
+                <path d="m14.5 4-5 16" />
               </svg>
             </span>
-            Engineering Focus
+            Development Focus
           </h2>
         </div>
 
