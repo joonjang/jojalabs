@@ -185,9 +185,17 @@ export default function Home() {
           <h2 id="what-i-build-title" className="section-title">
             <span className="title-icon" aria-hidden>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M10 5H8a3 3 0 0 0-3 3v2a2 2 0 0 1-2 2 2 2 0 0 1 2 2v2a3 3 0 0 0 3 3h2" />
-                <path d="M14 5h2a3 3 0 0 1 3 3v2a2 2 0 0 0 2 2 2 2 0 0 0-2 2v2a3 3 0 0 1-3 3h-2" />
-                <path d="m14.5 4-5 16" />
+                <path
+                  d="M10.2 4.7H9C7 4.7 5.9 5.9 5.9 7.9v1.5c0 1.4-1 2.3-2.5 2.6 1.5.3 2.5 1.2 2.5 2.6v1.5c0 2 1.1 3.2 3.1 3.2h1.2"
+                  transform="translate(-1.6 0)"
+                />
+                <path
+                  d="M13.8 4.7H15c2 0 3.1 1.2 3.1 3.2v1.5c0 1.4 1 2.3 2.5 2.6-1.5.3-2.5 1.2-2.5 2.6v1.5c0 2-1.1 3.2-3.1 3.2h-1.2"
+                  transform="translate(1.6 0)"
+                />
+                <circle cx="8.2" cy="12" r="1.2" fill="currentColor" stroke="none" />
+                <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" />
+                <circle cx="15.8" cy="12" r="1.2" fill="currentColor" stroke="none" />
               </svg>
             </span>
             Development Focus
