@@ -1,25 +1,29 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-  title: "Joja Labs | Independent Product Studio",
-  description:
-    "Independent product studio by Joon Jang. Spotlighting Learned Growth and future products built from Canada.",
-  icons: {
-    icon: [{ url: "/joja-icon.svg?v=2", type: "image/svg+xml" }],
-    shortcut: "/joja-icon.svg?v=2",
-    apple: "/joja-icon.svg?v=2",
-  },
+   title: 'Joja Labs | Independent Product Studio',
+   description:
+      'Independent product studio by Joon Jang. Spotlighting Learned Growth and future products built from Canada.',
+   icons: {
+      icon: [{ url: '/joja-icon.svg?v=2', type: 'image/svg+xml' }],
+      shortcut: '/joja-icon.svg?v=2',
+      apple: '/joja-icon.svg?v=2',
+   },
 };
 
 export default function RootLayout({
-  children,
+   children,
 }: Readonly<{
-  children: React.ReactNode;
+   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+   return (
+      <html lang="en">
+         <body>
+            {children}
+            <Analytics />
+         </body>
+      </html>
+   );
 }
