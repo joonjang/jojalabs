@@ -2,9 +2,7 @@ const links = {
   productSite: "https://www.learnedgrowth.com",
   ios: "https://apps.apple.com/us/app/learned-growth/id6756195213",
   android: "https://play.google.com/store/apps/details?id=com.joonjang.LearnedGrowth",
-  linkedin: "https://linkedin.com/in/joon-jang",
-  github: "https://github.com/joonjang",
-  email: "mailto:w.joon.jang@gmail.com",
+  email: "mailto:contact@jojalabs.com",
 } as const;
 
 const productProof = [
@@ -102,7 +100,7 @@ export default function Home() {
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
               </svg>
             </span>
-            Current product
+            Current Product
           </h2>
           <span className="status-pill">Live</span>
         </div>
@@ -217,75 +215,74 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section" aria-labelledby="contact-title">
-        <div className="section-head">
-          <h2 id="contact-title" className="section-title">
-            <span className="title-icon" aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-                <path d="M8 10h8" />
-                <path d="M8 14h5" />
-              </svg>
-            </span>
-            Contact
-          </h2>
-        </div>
-
-        <div className="contact-list">
-          <a className="contact-item" href={links.email}>
-            <span className="contact-icon" aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="m3 7 9 6 9-6" />
-              </svg>
-            </span>
-            <span className="contact-text">
-              <span className="contact-label">Email</span>
-              <span className="contact-value">w.joon.jang@gmail.com</span>
-            </span>
-          </a>
-
-          <a
-            className="contact-item"
-            href={links.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="contact-icon" aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </span>
-            <span className="contact-text">
-              <span className="contact-label">LinkedIn</span>
-              <span className="contact-value">linkedin.com/in/joon-jang</span>
-            </span>
-          </a>
+      <section className="section" aria-labelledby="contact-title" style={{ marginTop: "4rem" }}>
+        <style dangerouslySetInnerHTML={{ __html: `
+          .contact-card-layout {
+            display: flex !important;
+            flex-direction: row !important;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+            min-height: 0 !important;
+            height: auto !important;
+            background-color: rgba(150, 150, 150, 0.25) !important;
+            border: 1px solid rgba(150, 150, 150, 0.4) !important;
+          }
+          .contact-card-layout::before,
+          .contact-card-layout::after {
+            display: none !important;
+          }
+          .contact-card-text {
+            text-align: left;
+            flex: 1 1 auto;
+          }
+          .contact-card-title {
+            justify-content: flex-start;
+          }
+        `}} />
+        <article className="capability-card contact-card-layout">
+          <div className="contact-card-text">
+            <h2 id="contact-title" className="section-title contact-card-title" style={{ margin: "0 0 0.5rem 0", fontSize: "1.25rem", display: "flex", alignItems: "center", gap: "0.75rem", border: "none", padding: 0 }}>
+              <span className="title-icon" aria-hidden style={{ transform: "scale(1.15)" }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 7 9 6 9-6" />
+                </svg>
+              </span>
+              Contact
+            </h2>
+            <p style={{ margin: 0, opacity: 0.7, fontSize: "0.95rem" }}>
+              For questions and general inquiries.
+            </p>
+          </div>
 
           <a
-            className="contact-item"
-            href={links.github}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={links.email}
+            style={{
+              display: "inline-flex",
+              margin: "0 auto",
+              padding: "0.6rem 1.25rem",
+              color: "inherit",
+              textDecoration: "none",
+              backgroundColor: "rgba(150, 150, 150, 0.1)",
+              border: "1px solid rgba(150, 150, 150, 0.2)",
+              borderRadius: "0.5rem",
+              fontSize: "0.95rem",
+              fontWeight: 500,
+            }}
           >
-            <span className="contact-icon" aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.3 0 6.8-2 6.8-9A7 7 0 0 0 19 1.77 6.5 6.5 0 0 0 18.91 1S17.73.65 15 2.48a13.4 13.4 0 0 0-6 0C6.27.65 5.09 1 5.09 1A6.5 6.5 0 0 0 5 1.77 7 7 0 0 0 3.2 5.6c0 7 3.5 9 6.8 9A4.8 4.8 0 0 0 9 18v4" />
-                <path d="M9 18c-4.5 2-5-2-7-2" />
-              </svg>
-            </span>
-            <span className="contact-text">
-              <span className="contact-label">GitHub</span>
-              <span className="contact-value">github.com/joonjang</span>
-            </span>
+            contact@jojalabs.com
           </a>
-        </div>
+        </article>
       </section>
 
       <footer className="footer">
-        <p>© {new Date().getFullYear()} Joja Labs. Built by Joon Jang.</p>
+        <p>
+          © {new Date().getFullYear()} Joja Labs.
+        </p>
       </footer>
     </main>
   );
