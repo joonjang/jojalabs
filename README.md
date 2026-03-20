@@ -1,6 +1,6 @@
 # Joja Labs
 
-Portfolio site for Joja Labs, an independent product studio by Joon Jang.
+Portfolio site for Joja Labs, an independent product studio based in Vancouver.
 
 Built with Next.js (App Router), React, and TypeScript.
 
