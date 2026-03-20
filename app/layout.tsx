@@ -3,7 +3,7 @@ import './globals.css';
 import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
-   title: 'Joja Labs | Independent Product Studio',
+   title: 'Joja Labs',
    description:
       'Independent product studio by Joon Jang. Spotlighting Learned Growth and future products built from Canada.',
    icons: {
